@@ -4,10 +4,14 @@
 package User;
 
 /**
- * @author Wolfp
+ * @author William Nathan
  *
  */
 public class Player {
 
+    
+    public SoulStats soul;
+    
+    
 }
  
