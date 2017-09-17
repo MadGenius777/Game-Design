@@ -10,3 +10,4 @@ package Objects;
 public class Armor extends Equipment{
 
 }
+ 

@@ -10,3 +10,4 @@ package Objects;
 public class Weapon extends Equipment{
 
 }
+ 
