@@ -155,4 +155,78 @@ public class SoulStats {
             throw new IllegalArgumentException("Soul volume cannot be zero or less");
         this.soulVolume = soulVolume;
     }
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    /* (non-Javadoc)
+     * @see java.lang.Object#toString()
+     */
+    @Override
+    public String toString() {
+        return "SoulStats [soulRealm=" + soulRealm + ", soulType=" + soulType + ", soulAttribute=" + soulAttribute
+                + ", soulForm=" + soulForm + "]";
+    }
+
+    /* (non-Javadoc)
+     * @see java.lang.Object#hashCode()
+     */
+    @Override
+    public int hashCode() {
+        final int prime = 31;
+        int result = 1;
+        result = prime * result + ((soulAttribute == null) ? 0 : soulAttribute.hashCode());
+        result = prime * result + soulDensity;
+        result = prime * result + ((soulForm == null) ? 0 : soulForm.hashCode());
+        result = prime * result + ((soulRealm == null) ? 0 : soulRealm.hashCode());
+        result = prime * result + ((soulType == null) ? 0 : soulType.hashCode());
+        return result;
+    }
+
+    /* (non-Javadoc)
+     * @see java.lang.Object#equals(java.lang.Object)
+     */
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj)
+            return true;
+        if (obj == null)
+            return false;
+        if (getClass() != obj.getClass())
+            return false;
+        SoulStats other = (SoulStats) obj;
+        if (soulAttribute == null) {
+            if (other.soulAttribute != null)
+                return false;
+        } else if (!soulAttribute.equals(other.soulAttribute))
+            return false;
+        if (soulDensity != other.soulDensity)
+            return false;
+        if (soulForm == null) {
+            if (other.soulForm != null)
+                return false;
+        } else if (!soulForm.equals(other.soulForm))
+            return false;
+        if (soulRealm == null) {
+            if (other.soulRealm != null)
+                return false;
+        } else if (!soulRealm.equals(other.soulRealm))
+            return false;
+        if (soulType == null) {
+            if (other.soulType != null)
+                return false;
+        } else if (!soulType.equals(other.soulType))
+            return false;
+        return true;
+    }
+    
+    
+    
 }

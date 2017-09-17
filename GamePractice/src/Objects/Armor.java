@@ -19,8 +19,10 @@ public class Armor extends Equipment{
     /**     */
     public int armorDurability;
     
-    public Armor(String name, int weight, int amorType) {
-        super(name, weight);
+    
+    
+    public Armor(String name, int weight, int amorType, int equipSlot) {
+        super(name, weight, equipSlot);
         
     }
 
@@ -47,6 +49,11 @@ public class Armor extends Equipment{
     public void setArmorDurability(int armorDurability) {
         this.armorDurability = armorDurability;
     }
+
+    
+    
+    
+    
     
     
 }
