@@ -1,7 +1,7 @@
 /**
  * 
  */
-package Objects;
+package objects;
 
 /**
  * Weapon class
@@ -16,8 +16,8 @@ public class Weapon extends Equipment{
     
     
     
-    public Weapon(String name, int weight, int equipSlot, String weaponClass) {
-        super(name, weight, equipSlot);
+    public Weapon(String name, int weight, int volume, int equipSlot, String weaponClass) {
+        super(name, weight, volume, equipSlot);
         this.setWeaponClass(weaponClass);
     }
 

@@ -1,7 +1,7 @@
 /**
  * 
  */
-package Objects;
+package objects;
 
 /**
  * @author William Nathan

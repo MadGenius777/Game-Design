@@ -1,7 +1,7 @@
 /**
  * 
  */
-package Objects;
+package objects;
 
 /**
  * @author Wolfp
@@ -19,7 +19,7 @@ public abstract class Item {
     /** weight of item */
     public int weight;
     
-    public Item(String name, int weight) {
+    public Item(String name, int weight, int volume) {
         this.setName(name);
         this.setWeight(weight);
     }

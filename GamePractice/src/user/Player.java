@@ -1,7 +1,7 @@
 /**
  * 
  */
-package User;
+package user;
 
 /**
  * @author William Nathan

@@ -1,7 +1,7 @@
 /**
  * 
  */
-package Objects;
+package objects;
 
 /**
  * Armor class
@@ -21,8 +21,8 @@ public class Armor extends Equipment{
     
     
     
-    public Armor(String name, int weight, int amorType, int equipSlot) {
-        super(name, weight, equipSlot);
+    public Armor(String name, int weight, int volume, int amorType, int equipSlot) {
+        super(name, weight, volume, equipSlot);
         
     }
 
