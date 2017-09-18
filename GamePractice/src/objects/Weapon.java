@@ -16,8 +16,8 @@ public class Weapon extends Equipment{
     
     
     
-    public Weapon(String name, int weight, int volume, int equipSlot, String weaponClass) {
-        super(name, weight, volume, equipSlot);
+    public Weapon(String name, int weight, int volume, int quantity, int equipSlot, String weaponClass) {
+        super(name, weight, volume, quantity, equipSlot);
         this.setWeaponClass(weaponClass);
     }
 

@@ -15,8 +15,8 @@ public abstract class Equipment extends Item{
     public boolean isWorn;
     
     
-    public Equipment(String name, int weight, int volume, int equipSlot) {
-        super(name, weight, volume);
+    public Equipment(String name, int weight, int volume, int quantity, int equipSlot) {
+        super(name, weight, volume, quantity);
         this.setEquipSlot(equipSlot);
         this.setIsWorn(false);
         

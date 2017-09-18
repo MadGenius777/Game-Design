@@ -44,6 +44,11 @@ public class Inventory {
         if(inventory.get(invIndex) == null)
             return false;
         Equipment equip = (Equipment)inventory.get(invIndex);
+        if(equip.getQuantity() == 1) {
+            inventory.remove(invIndex);
+        } else {
+            inventory.get(invIndex).setQuantity(equip.getQuantity() - 1);
+        }
         equipment[equip.getEquipSlot()] = equip;
         return true;
     }

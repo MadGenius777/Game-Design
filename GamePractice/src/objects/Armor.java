@@ -21,8 +21,8 @@ public class Armor extends Equipment{
     
     
     
-    public Armor(String name, int weight, int volume, int amorType, int equipSlot) {
-        super(name, weight, volume, equipSlot);
+    public Armor(String name, int weight, int volume, int quantity, int amorType, int equipSlot) {
+        super(name, weight, volume, quantity, equipSlot);
         
     }
 

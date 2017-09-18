@@ -9,9 +9,12 @@ package objects;
  */
 public class Material extends Item{
 
-    public Material(String name, int weight, int volume) {
-        super(name, weight, volume);
-        
+
+    public String materialType;
+    
+    public Material(String name, int weight, int volume, int quantity) {
+        super(name, weight, volume, quantity);
     }
+   
 
 }
