@@ -35,7 +35,7 @@ public class Inventory {
     
     public void storeAllEquipment() {
         for(Equipment a : equipment) {
-            inventory.add(a);            
+            addItemToInventory(a);           
         }
         this.resetEquipment();
     }
@@ -54,12 +54,15 @@ public class Inventory {
     }
     
     public void addItemToInventory(Item item) {
+        boolean added = false;
         for(Item i : inventory) {
-            if(i.getName().equals(item.getName())) 
+            if(i.getName().equals(item.getName())) {
                 i.setQuantity(i.getQuantity()+item.getQuantity());
-
+                added = true;
+            }
         }
-        inventory.add(item);
+        if(!added)
+            inventory.add(item);
     }
     
     public boolean removeItemAmtFromInventory(Item item, int amt) {
@@ -74,6 +77,12 @@ public class Inventory {
         return false;
     }
     
+    /**
+     * Removes item from inventory
+     * 
+     * @param item item to be added
+     * @return boolean true if the item could be added
+     */
     public boolean removeItemFromInventory(Item item) {
         for(Item i : inventory) {
             if(i.getName().equals(item.getName())) {
