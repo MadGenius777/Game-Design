@@ -53,4 +53,34 @@ public class Inventory {
         return true;
     }
     
+    public void addItemToInventory(Item item) {
+        for(Item i : inventory) {
+            if(i.getName().equals(item.getName())) 
+                i.setQuantity(i.getQuantity()+item.getQuantity());
+
+        }
+        inventory.add(item);
+    }
+    
+    public boolean removeItemAmtFromInventory(Item item, int amt) {
+        for(Item i : inventory) {
+            if(i.getName().equals(item.getName())) {
+                if(i.getQuantity() < amt)
+                    throw new IllegalArgumentException("Inventory does not posses that quantity of this item.");
+                i.setQuantity(i.getQuantity() - amt);
+                return true;
+            }
+        }
+        return false;
+    }
+    
+    public boolean removeItemFromInventory(Item item) {
+        for(Item i : inventory) {
+            if(i.getName().equals(item.getName())) {
+                inventory.remove(i);
+                return true;
+            }
+        }
+        return false;
+    }
 }
