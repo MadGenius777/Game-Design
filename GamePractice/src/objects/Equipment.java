@@ -12,13 +12,13 @@ public abstract class Equipment extends Item{
     /** the slot that the equipment applies to */
     public int equipSlot;
     /** Describes if the equipment is currently equipped to the character */
-    public boolean isWorn;
+    public boolean equipped = false;
     
     
     public Equipment(String name, int weight, int volume, int quantity, int equipSlot) {
         super(name, weight, volume, quantity);
         this.setEquipSlot(equipSlot);
-        this.setIsWorn(false);
+        
         
     }
 
@@ -35,15 +35,15 @@ public abstract class Equipment extends Item{
     /**
      * @return the isWorn
      */
-    public boolean getIsWorn() {
-        return isWorn;
+    public boolean isWorn() {
+        return equipped;
     }
 
     /**
-     * @param isWorn the isWorn to set
+     * 
      */
-    public void setIsWorn(boolean isWorn) {
-        this.isWorn = isWorn;
+    public void setIsWorn() {
+        equipped = !equipped;
     }
 
     

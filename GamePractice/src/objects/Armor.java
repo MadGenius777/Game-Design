@@ -21,8 +21,9 @@ public class Armor extends Equipment{
     
     
     
-    public Armor(String name, int weight, int volume, int quantity, int amorType, int equipSlot) {
+    public Armor(String name, int weight, int volume, int quantity, int equipSlot, String armorType) {
         super(name, weight, volume, quantity, equipSlot);
+        setArmorClass(armorType);
         
     }
 
@@ -39,14 +40,18 @@ public class Armor extends Equipment{
     }
     
     public void setArmorDefense(int armorDefense) {
+        if(armorDefense < 0 )
+            throw new IllegalArgumentException("Armor defense cannot be negative.");
         this.armorDefense = armorDefense;
     }
     
-    public int getAmorDurability() {
+    public int getArmorDurability() {
         return armorDurability;
     }
     
     public void setArmorDurability(int armorDurability) {
+        if(armorDurability < 0 )
+            throw new IllegalArgumentException("Armor durability cannot be negative.");
         this.armorDurability = armorDurability;
     }
 

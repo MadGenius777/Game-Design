@@ -14,9 +14,9 @@ import objects.Item;
  */
 public class Inventory {
 
+    public int volume = 5;
     
     public ArrayList<Item> inventory;
-    
     public Equipment[] equipment;
     
     public Inventory() {      
@@ -92,4 +92,14 @@ public class Inventory {
         }
         return false;
     }
+    
+    public Item getItem(String name) {
+        for(Item i : inventory) {
+            if(i.getName().equals(name)) {
+                return i;
+            }
+        }
+        throw new IllegalArgumentException("No such item in the inventory");
+    }
+    
 }

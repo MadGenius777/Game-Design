@@ -36,6 +36,7 @@ public class Player {
         setLastName(lastName);
         soul = new SoulStats("Red", "Attribute-less", "Non-Cohesive");
         body = new PhysicalStats(5, 14);
+        inventory = new Inventory();
         
     }
     
@@ -70,6 +71,10 @@ public class Player {
      * @param firstName player's first name
      */
     public void setFirstName(String firstName) {
+        if(firstName == null)
+            throw new IllegalArgumentException("Name cannot be null");
+        if(firstName.equals(""))
+            throw new IllegalArgumentException("Name cannot be empty");
         this.firstName = firstName;
     }
     /**
@@ -78,6 +83,10 @@ public class Player {
      * @param lastName player's last name
      */
     public void setLastName(String lastName) {
+        if(lastName == null)
+            throw new IllegalArgumentException("Name cannot be null");
+        if(lastName.equals(""))
+            throw new IllegalArgumentException("Name cannot be empty");
         this.lastName = lastName;
     }
     
@@ -87,7 +96,7 @@ public class Player {
      * @param item item to inventory
      */
     public void addItem(Item item) {
-        inventory.addItemToInventory(item)            
+        inventory.addItemToInventory(item);            
     }
     /**
      * Removes some amount of an item from the player's inventory
@@ -114,7 +123,9 @@ public class Player {
     }
     
     
-    
+    public Item getItemFromInventory(String name) {
+        return inventory.getItem(name);
+    }
     
 }
  

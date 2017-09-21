@@ -13,7 +13,7 @@ public class PhysicalStats {
     
     public int dexterity;
     
-    public int lifeSpan;
+    public int lifeSpan = 960;
     
     public int vitality;
     

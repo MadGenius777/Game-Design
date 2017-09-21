@@ -40,7 +40,7 @@ public abstract class Item {
         if(name == null)
             throw new IllegalArgumentException("Item name cannot be null.");
         if(name.equals(""))
-            throw new IllegalArgumentException("Item name cannot be empty");
+            throw new IllegalArgumentException("Item name cannot be blank.");
         this.name = name;
     }
     
@@ -60,7 +60,7 @@ public abstract class Item {
     
     public void setVolume(int volume) {
         if(volume < 0 )
-            throw new IllegalArgumentException("Item volume cannot be negative");
+            throw new IllegalArgumentException("Item volume cannot be negative.");
         this.volume = volume;
     }
     
@@ -70,7 +70,8 @@ public abstract class Item {
     
     public void setQuantity(int newQuantity) {
         if(newQuantity < 0)
-            throw new IllegalArgumentException("Item quantity cannot be negative");
+            throw new IllegalArgumentException("Item quantity cannot be negative.");
         quantity = newQuantity;
+    }
 }
  
