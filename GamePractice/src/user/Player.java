@@ -3,6 +3,7 @@
  */
 package user;
 
+import objects.Attribute;
 import objects.Item;
 
 /**
@@ -31,11 +32,13 @@ public class Player {
      * @param firstName
      * @param lastName
      */
-    public Player(String firstName, String lastName) {
+    public Player(String firstName, String lastName, String soulRealm, String soulForm
+            , String soulAttribute, String soulNature, int strength, int dexterity) {
         setFirstName(firstName);
         setLastName(lastName);
-        soul = new SoulStats("Red", "Attribute-less", "Non-Cohesive");
-        body = new PhysicalStats(5, 14);
+        Attribute soulAtr = new Attribute(soulAttribute, soulNature);
+        soul = new SoulStats(soulRealm, soulAtr, soulForm);
+        body = new PhysicalStats(strength, dexterity);
         inventory = new Inventory();
         
     }

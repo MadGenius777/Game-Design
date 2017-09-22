@@ -10,12 +10,37 @@ package system;
 public class Store {
 
     public String goodsType;
+    public String merchantType;
     public int goodsRarity;
     public int extortionRate;
     
-    public Store(String goodsType, int goodsRarity, int extortionRate) {
-        
+    public String storeName;
+    
+    public Store(String storeName, String goodsType, int goodsRarity, int extortionRate) {
+        setStoreName(storeName);
+        setGoodsType(goodsType);
+        setGoodsRarity(goodsRarity);
+        setExtortionRate(extortionRate);
     }
+
+    
+    /**
+     * @return the storeName
+     */
+    public String getStoreName() {
+        return storeName;
+    }
+
+
+    /**
+     * @param storeName the storeName to set
+     */
+    public void setStoreName(String storeName) {
+        if(storeName == null || storeName.equals(""))
+            throw new IllegalArgumentException("Invalid store name.");
+        this.storeName = storeName;
+    }
+
 
     /**
      * @return the goodsType
@@ -61,5 +86,21 @@ public class Store {
      */
     public void setExtortionRate(int extortionRate) {
         this.extortionRate = extortionRate;
+    }
+
+    /**
+     * @return the merchantType
+     */
+    public String getMerchantType() {
+        return merchantType;
+    }
+
+    /**
+     * @param merchantType the merchantType to set
+     */
+    public void setMerchantType(String merchantType) {
+        if(merchantType == null || merchantType.equals(""))
+            throw new IllegalArgumentException("Invalid merchant type.");
+        this.merchantType = merchantType;
     }
 }

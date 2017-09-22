@@ -7,11 +7,13 @@ package objects;
  * @author William Nathan
  *
  */
-public class Material extends Item{
+public abstract class Material extends Item{
 
 
     public String materialType;
-   
+    public Attribute attribute;
+    public String stateOfMatter;
+    
     
     
     public Material(String name, int weight, int volume, int quantity, String materialType) {
