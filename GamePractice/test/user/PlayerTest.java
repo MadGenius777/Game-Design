@@ -19,7 +19,7 @@ public class PlayerTest {
     public void testPlayerConstructor() {
         
         //testing valid player constructor
-        Player p1 = new Player("Ashur", "Drake");
+        Player p1 = new Player("Ashur", "Drake", null, null, null, null, 0, 0);
         
         assertEquals("Ashur", p1.getFirstName());
         assertEquals("Drake", p1.getLastName());
@@ -27,25 +27,25 @@ public class PlayerTest {
         
         
         try {
-            new Player("", "Drake");
+            new Player("", "Drake", null, null, null, null, 0, 0);
         } catch (IllegalArgumentException e) {
             assertEquals("Name cannot be empty", e.getMessage());
         }
         
         try {
-            new Player(null, "Drake");
+            new Player(null, "Drake", null, null, null, null, 0, 0);
         } catch (IllegalArgumentException e) {
             assertEquals("Name cannot be null", e.getMessage());
         }
         
         try {
-            new Player("Ashur", "");
+            new Player("Ashur", "", null, null, null, null, 0, 0);
         } catch (IllegalArgumentException e) {
             assertEquals("Name cannot be empty", e.getMessage());
         }
         
         try {
-            new Player("Ashur", null);
+            new Player("Ashur", null, null, null, null, null, 0, 0);
         } catch (IllegalArgumentException e) {
             assertEquals("Name cannot be null", e.getMessage());
         }
@@ -56,7 +56,7 @@ public class PlayerTest {
     @Test
     public void testInventoryManagement() {
         Item i = new Armor("Helmet", 4, 1, 4, 1, "head");
-        Player p1 = new Player("Ashur", "Drake");
+        Player p1 = new Player("Ashur", "Drake", null, null, null, null, 0, 0);
         
         p1.addItem(i);
         assertTrue(p1.removeItem(i));
